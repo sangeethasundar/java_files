@@ -1,0 +1,23 @@
+class Main {
+  public static void main(String[] args) {
+    int[] arr={1,2,3};
+    int arr_len=arr.length;
+    int n=(int)Math.pow(2,arr_len);
+    for(int i=1;i<n;i++){
+      String b=Integer.toBinaryString(i);
+      int len=arr_len-b.length();
+      String zeroes="";
+      while(len-->0){
+         zeroes+='0';
+      }
+      String dup=b;
+      b=zeroes+dup;
+    for(int j=0;j<arr_len;j++){
+      if(b.charAt(j)=='1'){
+        System.out.print(arr[j]+" ");
+      }
+    }
+    System.out.println();
+  }
+}
+}
