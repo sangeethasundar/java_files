@@ -1,0 +1,40 @@
+class Main {
+  static int min=999;
+  public static void main(String[] args) {
+    int[] arr={1,2,3};
+    int arr_len=arr.length;
+    int n=(int)Math.pow(2,arr_len);
+    int count=0,k=2;
+    for(int i=1;i<n;i++){
+      String b=Integer.toBinaryString(i);
+      int len=arr_len-b.length();
+      String zeroes="";
+      while(len-->0){
+         zeroes+='0';
+      }
+      String dup=b;
+      b=zeroes+dup;
+      int[] store=new int[20];
+      int l=0,sum=0;
+    for(int j=0;j<arr_len;j++){
+      if(b.charAt(j)=='1'){
+        //System.out.print(arr[j]+" ");
+        store[l++]=arr[j];
+      }
+    }
+    //System.out.println("length:"+l);
+    if(l==k){
+      for(int j=0;j<l;j++){
+          sum+=store[j];
+      }
+      if(sum<min){
+      min=sum;
+      count=1;
+    }
+    else if(sum==min)
+        count++;
+    }
+  }
+  System.out.println(count);
+}
+}
