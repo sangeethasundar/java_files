@@ -1,0 +1,26 @@
+import java.util.ArrayList;
+
+class Main {
+  public static void main(String[] args) {
+    int n=7,k,l=0;
+    for(int i=n;i>0;i--){
+      for(k=1;k<i;k++){
+        System.out.print("1");
+      }
+      l++;
+      for(int j=i;j<=n;j++){
+        System.out.print(l);
+      }
+      System.out.println();   
+    }
+  }
+}
+
+output:
+1111111
+1111122
+1111333
+1114444
+1155555
+1666666
+7777777
