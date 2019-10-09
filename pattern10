@@ -1,0 +1,37 @@
+import java.util.ArrayList;
+
+class Main {
+  public static void main(String[] args) {
+    int n=7,i,j,k;
+    ArrayList<String> al=new ArrayList<String>();
+    String s;
+    for(i=n;i>0;i--){
+      s="";
+      for(j=1;j<=i;j++){
+        System.out.print(j+" ");
+        if(i!=1)
+          s=s+j+" ";
+      }
+      if(i!=1)
+        al.add(s);
+      System.out.println();
+    }
+    for(k=al.size()-1;k>=0;k--)
+      System.out.println(al.get(k));
+  }
+}
+
+output:
+1 2 3 4 5 6 7
+1 2 3 4 5 6
+1 2 3 4 5
+1 2 3 4
+1 2 3
+1 2
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+1 2 3 4 5 6
+1 2 3 4 5 6 7
